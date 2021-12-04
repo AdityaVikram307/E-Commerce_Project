@@ -14,21 +14,42 @@ body {
 nav {
   flex: 1;
   text-align: right;
+  display: inline-block;
 }
 nav ul {
   display: inline-block;
   list-style-type: none;
 }
-nav ul li {
+.items {
   display: inline-block;
-  margin-right: 20px;
+  position: relative;
+  color: #145519;
+  margin-left: 16px;
+}
+
+.items:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #145519;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.items:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 a {
   text-decoration: none;
-  color: #555;
+  color: rgb(6, 48, 15);
 }
 p {
-  color: #555;
+  color: rgb(6, 48, 15);
 }
 .container {
   max-width: 1300px;
@@ -58,7 +79,7 @@ p {
 }
 .btn {
   display: inline-block;
-  background: #ff523b;
+  background: #1ba32d;
   color: #fff;
   padding: 8px 30px;
   margin: 30px 0;
@@ -66,13 +87,14 @@ p {
   transition: background 0.5s;
 }
 .btn:hover {
-  background: #563434;
+  background: #59bd77;
 }
 .header {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, rgb(177, 214, 170));
 }
 .header .row {
   margin-top: 70px;
+  margin-left: 5px;
 }
 .categories {
   margin: 70px 0;
@@ -110,7 +132,7 @@ p {
 }
 .title::after {
   content: "";
-  background: #ff523b;
+  background: #12741a;
   width: 80px;
   height: 5px;
   border-radius: 5px;
@@ -127,14 +149,14 @@ h4 {
   font-size: 14px;
 }
 .checked {
-  color: #ff523b;
+  color: #3db339;
 }
 .col-4:hover {
   transform: translateY(-5px);
 }
 
 .offer {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#fff, rgb(177, 214, 170));
   margin-top: 80px;
   padding: 30px 0;
 }
@@ -165,7 +187,11 @@ small {
 }
 .fa.fa-quote-left {
   font-size: 34px;
-  color: #ff523b;
+  color: #215a21;
+}
+.fa.fa-quote-right {
+  font-size: 34px;
+  color: #215a21;
 }
 .col-3 p {
   font-size: 12px;
@@ -194,7 +220,7 @@ small {
 }
 /* footer */
 .footer {
-  background-color: #000;
+  background-color: rgb(177, 214, 170);
   color: #8a8a8a;
   font-size: 14px;
   padding: 60px 0 20px;
@@ -234,6 +260,7 @@ small {
 .footer-col-4 {
   flex-basis: 12px;
   text-align: center;
+  color: rgb(6, 48, 15);
 }
 ul {
   list-style-type: none;
@@ -300,7 +327,7 @@ ul {
   margin: 100px auto 50px;
 }
 select {
-  border: 1px solid #ff523b;
+  border: 1px solid #45a738;
   padding: 5px;
 }
 select:focus {
@@ -311,7 +338,7 @@ select:focus {
 }
 .page-btn span {
   display: inline-block;
-  border: 1px solid #ff523b;
+  border: 1px solid #28b823;
   margin-left: 10px;
   width: 40px;
   height: 40px;
@@ -320,7 +347,7 @@ select:focus {
   cursor: pointer;
 }
 .page-btn span:hover {
-  background: #ff523b;
+  background: #28b823;
   color: #fff;
 }
 
